@@ -3,10 +3,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>ShipServ Web Monitoring Application</title>
+<title>Web Monitoring Application</title>
 </head>
 <body>
-	<h3>ShipServ Web Monitoring Application</h3>
+	<h3>Web Monitoring Application</h3>
 	<h2>Your new web url has been added succesfully: ${websiteForm.url}</h2>
 	<p>Click this link to add again new web url: <a href="/addweburlpage" >Add New Web URL</a> </p>
 	<p>Click this link to go back to the list: <a href="/" >Web Monitoring List</a> </p>

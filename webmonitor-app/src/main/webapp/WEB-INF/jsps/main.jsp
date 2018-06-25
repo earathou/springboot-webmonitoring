@@ -9,10 +9,10 @@
 
 <link href="/css/main.css" rel="stylesheet"></link>
 
-<title>ShipServ Web Monitoring Application</title>
+<title>Web Monitoring Application</title>
 </head>
 <body>
-	<h1>Welcome to ShipServ Web Monitoring Application</h1>
+	<h1>Welcome to Web Monitoring Application</h1>
 	<h3>Here are the list of websites being monitored:</h3>
 	<table border=1 style="width:50%;align:left" cellpadding="0">
 		<tr>

@@ -7,10 +7,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="/css/main.css" rel="stylesheet"></link>
 
-<title>Welcome ShipServ Web Monitoring Application</title>
+<title>Welcome to Web Monitoring Application</title>
 </head>
 <body>
-	<h1>Welcome ShipServ Web Monitoring Application</h1>
+	<h1>Welcome to Web Monitoring Application</h1>
 	<h3>Please add a web url:</h3>
 	<form:form method="POST" modelAttribute="websiteForm" action="/addwebsite">
 		<table>
