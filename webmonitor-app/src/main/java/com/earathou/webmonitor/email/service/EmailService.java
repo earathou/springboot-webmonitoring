@@ -20,7 +20,7 @@ import com.earathou.webmonitor.ping.service.PingWebService;
 import com.earathou.webmonitor.website.WebsiteForm;
 
 @Service
-public class EmailService implements EmailFactory, Runnable {
+public class EmailService implements EmailFactory {
 	
 	private EmailContactInfo senderEmail;
 	private EmailContactInfo recipientEmail;
@@ -135,11 +135,6 @@ public class EmailService implements EmailFactory, Runnable {
 				System.out.println("MessagingException message: " + e.getMessage());
 			}
 		}
-	}
-
-	@Override
-	public void run() {
-		sendMessage();
 	}
 
 	public ArrayList<WebsiteForm> getWebsites() {
