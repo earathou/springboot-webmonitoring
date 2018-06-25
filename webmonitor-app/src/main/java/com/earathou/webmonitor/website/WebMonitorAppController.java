@@ -25,27 +25,12 @@ public class WebMonitorAppController {
 	@Autowired
 	private PingWebService pingWebsiteservice;
 	
-	@Autowired
-	private EmailService emailService;
-	
 	@GetMapping(value = "/")
 	public ModelAndView displayWebsites() {
 		ArrayList<WebsiteForm> websites = websiteservice.getAllWebsites();
 		
-		boolean hasWebsiteNotAvailable = false;
-		
-		for (WebsiteForm website : websites) {
-			String status = pingWebsiteservice.url(website.getUrl());
-			website.setStatus(status);
-			
-			if (!hasWebsiteNotAvailable && PingWebService.WEBPAGE_STATUS_NOT_AVAILABLE.equals(status))
-				hasWebsiteNotAvailable = true;
-		}
-		
-		if (hasWebsiteNotAvailable) {
-			emailService.setWebsites(websites);
-			new Thread(emailService).start();
-		}
+		for (WebsiteForm website : websites) 
+			website.setStatus(pingWebsiteservice.url(website.getUrl()));
 		
 		WebsiteListForm websiteListForm = new WebsiteListForm();
 		websiteListForm.setWebsites(websites);
